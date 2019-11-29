@@ -28,4 +28,12 @@ public class User implements Serializable {
     public int hashCode() {
         return Objects.hash(userName, userRole);
     }
+
+    public String getUserName() {
+        return userName;
+    }
+
+    public void setUserName(String userName) {
+        this.userName = userName;
+    }
 }

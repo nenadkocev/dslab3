@@ -20,7 +20,8 @@ public class Application {
         Optional<Task> undoneTask = tasks.stream().filter(t -> t.equals(task)).findFirst();
         if(undoneTask.isPresent()){
             Task task1 = undoneTask.get();
-            task1 = task;
+            task1.setDone(task.isDone());
+            task1.setResult(task.getResult());
             System.out.println(task1);
         }
     }
